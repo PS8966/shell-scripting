@@ -36,3 +36,12 @@ then
 else
     echo "$original_num is not a palindrome number."
 fi
+
+#checking the loop with until statement
+c=0
+array=("terraform" "ansible" "chef")
+until [ $c < 3 ]
+do
+  echo "${array[$c]}"
+  c=$((($c) + 1 ))
+done
