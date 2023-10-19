@@ -1,0 +1,108 @@
+1. File Operations
+Below is the Linux commands cheat list covering the day-to-day file operations. It lists down almost every command you would most likely need to run.
+
+Linux Command	Description
+ls	                        List files and directories with detailed information.
+ls -l	                        Display in long format with file permissions, owner, size, and modification date.
+ls -a	                        Show hidden files as well.
+ls -lh	                        Display human-readable sizes.
+ls *.txt	                List all text files in the current directory.
+ls -R /path/to/directory	Recursively list all files and directories in the specified path.
+mkdir	Create a new directory to organize files.
+mkdir -m 777 shared_folder	Create a directory with specific permissions (e.g., 777 for read, write, and execute for all users).
+mkdir -v project1 project2	Create multiple directories and show the progress for each.
+mkdir -p /path/to/nested/directory	Create nested directories with parents if they don’t exist.
+
+2. File Manipulation
+Here is a list of file manipulation commands to help you in your routine tasks. Also, learn to manage your files more efficiently than ever.
+
+Linux Command	              Description
+cp	                      Copy files or directories to a specified location.
+cp -i file.txt /backup/	      Prompt before overwriting an existing file in the ‘/backup/’ directory.
+cp -u /source/* /destination/	Copy only newer files from ‘source’ to ‘destination’.
+mv	                      Move or rename files and directories.
+mv -i old.txt new.txt	      Prompt before overwriting an existing file while renaming.
+mv *.txt /backup/	      Move all text files to the ‘/backup/’ directory.
+
+3. File Content Viewing
+Debugging and log analysis are some of the common operations, we have to do on a regular basis. The below Linux commands cheat list will make your life easier.
+
+Linux Command	          Description
+cat	                  Display the content of a file.
+cat -n file.txt	          Display line numbers with the content.
+cat file1.txt file2.txt >merged.txt	Concatenate and merge multiple files into ‘merged.txt’.
+head	                  View the beginning lines of a file.
+head -n 10 file.txt	  Display the first 10 lines of ‘file.txt’.
+head -c 1M file.txt	  View the first 1 MB of ‘file.txt’.
+tail	                  View the last lines of a file.
+tail -n 20 file.txt	  Display the last 20 lines of ‘file.txt’.
+tail -f /var/log/syslog	  Continuously display new log entries in 'syslog'
+
+
+4. Linux File Permissions Command Cheat List
+The below Linux commands will help you in setting up file permissions and groups.
+
+Linux Command	         Description
+chmod	                 Change file permissions for users and groups.
+chmod g+s shared_folder	 Set the group ID on execution (newly created files inherit the group of the parent directory).
+chmod -R o-rwx /confidential_data	Recursively remove read, write, and execute permissions for others in ‘confidential_data’.
+chown	                 Change file ownership.
+sudo chown -R root:admin /protected_folder	Change ownership of ‘protected_folder’ to ‘root’ user and ‘admin’ group recursively.
+
+
+5. Linux File Search Commands Cheat Sheet
+The below Linux commands cheat list will make your search faster and increase productivity.
+
+Ezoic
+Linux Command	         Description
+grep	                 Search for a pattern in files.
+grep -n "error" logfile.txt	Display line numbers with matching results.
+grep -r "function()" src/ --include=*.js	Search for the occurrence of “function()” in JavaScript files only.
+find	                 Find files and directories based on various criteria.
+find / -type f -iname "*.jpg" -size +1M	    Find JPEG files larger than 1 MB case-insensitively from the root directory.
+
+
+6. Compression Commands Cheat List
+Working with large data and files, here is a list of Linux commands to organize your data quickly.
+
+Linux Command	Description
+tar	Create or extract tar archives.
+tar -czvf archive.tar.gz folder/	Create a compressed tar archive of ‘folder/’.
+tar -xzvf archive.tar.gz --wildcards '*.txt'	Extract only ‘.txt’ files from ‘archive.tar.gz’.
+zip	Compress files into a zip archive.
+zip -r archive.zip folder/ -x "*.txt"	Compress ‘folder/’ excluding ‘.txt’ files.
+7. Linux Networking Commands Cheat Sheet
+Are you experiencing network failures but unable to troubleshoot the issue? Check the below Linux commands cheat list to trace the network problem.
+
+Linux Command	Description
+ping	Check network connectivity.
+ping -c 4 google.com	Send 4 packets while pinging.
+ping -i 2 google.com	Set an interval of 2 seconds between packets.
+ifconfig	Display network interface information.
+ifconfig eth0 up	Enable the ‘eth0’ network interface.
+ifconfig eth0 down	Disable the ‘eth0’ network interface.
+8. Process Management
+Do you want to know what processes are running on your system? Or Did any process get hanged? The below commands will help you manage the running processes.
+
+Ezoic
+Linux Command	Description
+ps	Show running processes.
+ps -ef | grep sshd	Filter and display processes with "sshd" string in the output.
+ps -eo pid,ppid,cmd,%mem,%cpu	Customize the output to display process ID, parent process ID, command, memory, and CPU usage.
+kill	Terminate a process.
+kill -9 1234	Forcefully terminate the process with PID 1234.
+killall -r 'myapp.*'	Kill all processes whose names match the regular expression 'myapp.*'.
+9. System Information
+Looking for ways to check the OS version or worried about the free space on the disk? Here are the commands you need to know.
+
+Linux Command	Description
+uname	Display system information.
+uname -m	Show the machine hardware name.
+uname -o	Display the operating system name.
+df	Show disk space usage.
+df -Th	Display disk space usage with human-readable sizes and file system types.
+df -i /dev/sda1	Show inode information for the ‘/dev/sda1’ partition.
+
+
+
+
